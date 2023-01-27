@@ -69,9 +69,9 @@ class ResNet(nn.Module):
 
 def X_creation(net_dimension,X_dimension=1,X_model="random"):
   if X_model=="random" :
-    X=torch.rand([X_dimension,net_dimension])
+    X=torch.rand((X_dimension,net_dimension))
   elif X_model=="diff":
-    X=torch.zeros([X_dimension,net_dimension])
+    X=torch.zeros((X_dimension,net_dimension))
     for i in range (X.size()):
       X[i][0]=1
       X[i][1]=-1
@@ -118,5 +118,5 @@ def loss_W(net, weights_name, X, watermark):
     W = flattened_weight(net, weights_name)
     yj = projection(X, W)
     for i in range(len(watermark)):
-        loss += watermark[i] * torch.log2(yj[i]) + (1 - watermark[i]) * torch.log2(1 - yj[i]) #Diviser par taille du message
+        loss += watermark[i] * torch.log2(yj[i]) + (1 - watermark[i]) * torch.log2(1 - yj[i])
     return -loss/len(watermark)

@@ -3,6 +3,7 @@ import os
 import shutil
 
 import pandas as pd
+import torchvision
 from PIL import Image, ImageFont, ImageDraw
 import itertools
 import torch
@@ -217,4 +218,20 @@ def plot_confusion_matrix(cm, classes,directory,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    plt.savefig(directory + '/Confusion_Matrix.png', format="pdf")
+    plt.savefig(directory + '/Confusion_Matrix.png')
+
+def test_model(input, model):
+    output = model(input)
+    return output
+
+def inference(net, img,device):
+    """make the inference for one image and a given transform"""
+    net.eval()
+    with torch.no_grad():
+        img = torchvision.transforms.functional.pil_to_tensor(img)
+        img = img.to(device)
+        logits = net(img)
+        _, predicted = torch.max(logits, 1) # take the maximum value of the last layer
+    return predicted
+
+
