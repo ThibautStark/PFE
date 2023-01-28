@@ -60,6 +60,10 @@ We carrying out a watermarking, one has always to keep in mind those 3 principle
 
 ![WhiteBoxTheory3](readme_images/11.PNG "WhiteBoxTheory3")
 
+So if we recap, the idea behind whitebox watermarking is the following :
+
+![WhiteBoxRecap](readme_images/WhiteBoxRecap.PNG "WhiteBoxRecap")
+
 
 ### Our hyperparameters
 
