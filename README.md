@@ -8,40 +8,40 @@ This work was carried out by STARK Thibaut & BRUN Loïs for an end of engineerin
 (place holder paper1)
 (place holder paper2)
 
-### Black and whitebox watermarking
+## Black and whitebox watermarking
 
 For now, only the two following methods exist for neural network watermarking.
 
 ![HowtoWatermark](readme_images/6.PNG "HowtoWatermark")
 
-### Attacks on the watermark
+## Attacks on the watermark
 
 ![AttacksOnTheWatermark](readme_images/15.PNG "AttacksOnTheWatermark")
 
-### The watermark triangle
+## The watermark triangle
 We carrying out a watermarking, one has always to keep in mind those 3 principle to keep as high as possible 
 
 ![Watermark triangle](readme_images/5.PNG "Watermark triangle")
 
-### Our pratical application
+## Our pratical application
 
 ![Practical Application](readme_images/12.PNG "Practical application")
 
 ![ResultsWithoutWatermark](readme_images/16.PNG "ResultsWithoutWatermark")
 
-## Blackbox watermarking
+# Blackbox watermarking
 
-### The theory
+## The theory
 
 ![BlackBoxTheory1](readme_images/7.PNG "BlackBoxTheory1")
 
 ![BlackBoxTheory2](readme_images/8.PNG "BlackBoxTheory2")
 
-### Our hyperparameters
+## Our hyperparameters
 
 ![BlackBoxApplication](readme_images/13.PNG "BlackBoxApplication")
 
-### Our results
+## Our results
 
 ![BlackBoxResultsWithoutAttacks](readme_images/17.PNG "BlackBoxResultsWithoutAttacks")
 
@@ -50,9 +50,9 @@ We carrying out a watermarking, one has always to keep in mind those 3 principle
 ![BlackBoxResultsFinetuning](readme_images/19.PNG "BlackBoxResultsFinetuning")
 
 
-## Whitebox watermarking
+# Whitebox watermarking
 
-### The theory
+## The theory
 
 ![WhiteBoxTheory1](readme_images/9.PNG "WhiteBoxTheory1")
 
@@ -65,11 +65,11 @@ So if we recap, the idea behind whitebox watermarking is the following :
 ![WhiteBoxRecap](readme_images/WhiteBoxRecap.PNG "WhiteBoxRecap")
 
 
-### Our hyperparameters
+## Our hyperparameters
 
 ![WhiteBoxApplication](readme_images/14.PNG "WhiteBoxApplication")
 
-### Our results
+## Our results
 
 ![WhiteBoxResultsWithoutAttacks](readme_images/20.PNG "WhiteBoxResultsWithoutAttacks")
 
@@ -79,7 +79,7 @@ So if we recap, the idea behind whitebox watermarking is the following :
 
 ![WhiteBoxResultsPruning](readme_images/23.PNG "WhiteBoxResultsPruning")
 
-## Conclusion
+# Conclusion
 
 ![Conclusion](readme_images/24.PNG "Conclusion")
 
