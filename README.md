@@ -15,8 +15,14 @@ For now, only the two following methods exist for neural network watermarking.
 ![HowtoWatermark](readme_images/6.PNG "HowtoWatermark")
 
 ## Attacks on the watermark
+They are two main attacks on our watermark that we are trying to resist from. Both are commonly use after copy and pasting the weights of an already trained neural network. It is then important to study their effects on our watermark.
 
+Thoses two attacks are the following 
 ![AttacksOnTheWatermark](readme_images/15.PNG "AttacksOnTheWatermark")
+For more information on finetuning please see : <br />
+[What is Fine-tuning in Neural Networks?](https://www.baeldung.com/cs/fine-tuning-nn)
+For more information on pruning please see : <br />
+[Pruning Neural Networks](https://towardsdatascience.com/pruning-neural-networks-1bb3ab5791f9)
 
 ## The watermark triangle
 We carrying out a watermarking, one has always to keep in mind those 3 principle to keep as high as possible 
