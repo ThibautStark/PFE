@@ -1,12 +1,12 @@
 # Neural Network Watermarking
 
 ## A bit of context 
-In early 2023, the norm of developping a CNN is to copy and paste the weights of already trained CNN. There is, at this date, no way to recognize the training owner yet the dataset and the resources invested in its training represent its value.
-Like visual watermarking, neural network watermarking aims to embed the mark of ownership of the resources of a network in the network itself.
+In early 2023, the norm of developping a CNN is to copy and paste the weights of already trained CNN. There is, at this date, no way to recognize the training owner yet the dataset and the resources invested in its training represent its value. <br />
+Like visual watermarking, neural network watermarking aims to embed the mark of ownership of the resources of a network in the network itself. <br />
 
-This work was carried out by STARK Thibaut & BRUN Loïs for an end of engineering school project (PFE) in Telecom SudParis in the major High Tech Imaging under the supervision of Carl DE SOUSA TRIAS and Mihai MITREA and based on those two papers :
-(place holder paper1)
-(place holder paper2)
+This work was carried out by STARK Thibaut & BRUN Loïs for an end of engineering school project (PFE) in Telecom SudParis in the major High Tech Imaging under the supervision of Carl DE SOUSA TRIAS and Mihai MITREA and based on those two papers : <br />
+[Protecting Intellectual Property of Deep Neural Networks with Watermarking](https://dl.acm.org/doi/10.1145/3196494.3196550) <br />
+[Digital Watermarking for Deep Neural Networks](https://arxiv.org/abs/1802.02601)
 
 ## Black and whitebox watermarking
 
