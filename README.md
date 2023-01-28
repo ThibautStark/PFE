@@ -6,18 +6,18 @@ Like visual watermarking, neural network watermarking aims to embed the mark of 
 
 This work was carried out by STARK Thibaut & BRUN Loïs for an end of engineering school project (PFE) in Telecom SudParis in the major High Tech Imaging under the supervision of Carl DE SOUSA TRIAS and Mihai MITREA and based on those two papers : <br />
 [Protecting Intellectual Property of Deep Neural Networks with Watermarking](https://dl.acm.org/doi/10.1145/3196494.3196550) <br />
-[Digital Watermarking for Deep Neural Networks](https://arxiv.org/abs/1802.02601)
+[Digital Watermarking for Deep Neural Networks](https://arxiv.org/abs/1802.02601) <br />
 
 ## Black and whitebox watermarking
 
 For now, only the two following methods exist for neural network watermarking. <br />
 
-![HowtoWatermark](readme_images/6.PNG "HowtoWatermark")
+![HowtoWatermark](readme_images/6.PNG "HowtoWatermark") <br />
 
 ## Attacks on the watermark
-They are two main attacks on our watermark that we are trying to resist from. Both are commonly use after copy and pasting the weights of an already trained neural network. It is then important to study their effects on our watermark.
+They are two main attacks on our watermark that we are trying to resist from. Both are commonly use after copy and pasting the weights of an already trained neural network. It is then important to study their effects on our watermark. <br />
 
-Thoses two attacks are the following : 
+Thoses two attacks are the following : <br />
 ![AttacksOnTheWatermark](readme_images/15.PNG "AttacksOnTheWatermark")  <br />
 For more information on finetuning please see : <br />
 [What is Fine-tuning in Neural Networks?](https://www.baeldung.com/cs/fine-tuning-nn) <br />
@@ -34,7 +34,7 @@ We carrying out a watermarking, one has always to keep in mind those 3 principle
 For our study, we chose to use a simple form of resnet on the cifar10 dataset. We made this choice for its simplicity in usage and how much this dataset and this network architecture are widespread in the deeplearning community.  <br />
 ![Practical Application](readme_images/12.PNG "Practical application")  <br />
 
-With those choices and commun hyperparameters, we obtain after a simple training without watermarking thoses results, which will serve as our contrl trial <br />
+With those choices and commun hyperparameters, we obtain after a simple training without watermarking thoses results, which will serve as our control trial <br />
 ![ResultsWithoutWatermark](readme_images/16.PNG "ResultsWithoutWatermark")
 
 # Blackbox watermarking
