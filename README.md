@@ -68,20 +68,27 @@ For our experiments, we chose theses hyperparameters since they are communly use
 
 ## The theory
 
-![WhiteBoxTheory1](readme_images/9.PNG "WhiteBoxTheory1")
+The idea behind whitebox watermarking is to embed the watermark into the weights themselves. In order to carry out such a task, we need to have access to the weights of a chosen layer. <br />
 
-![WhiteBoxTheory2](readme_images/10.PNG "WhiteBoxTheory2")
+In order to change the weights to embed our watermark, we are changing the loss itself. In order to do that we add to the original loss our watermark loss with a regularization term. <br />
+![WhiteBoxTheory1](readme_images/9.PNG "WhiteBoxTheory1") <br />
 
-![WhiteBoxTheory3](readme_images/11.PNG "WhiteBoxTheory3")
+This watermark loss is created by using a X_key. This X_key is created with the size of our original watermark (which is a (Tx1) tensor made out of 1 and 0)) and has to be secret. Only with this key you can detect the watermark. X_key is created with randomly generated numbers between 0 and 1.   <br />
+![WhiteBoxTheory2](readme_images/10.PNG "WhiteBoxTheory2")<br />
 
-So if we recap, the idea behind whitebox watermarking is the following :
+With that X_key, we can project the layer's weigths onto it then do a binary cross entropy in order to get our previously mentionned watermark loss <br />
+![WhiteBoxTheory3](readme_images/11.PNG "WhiteBoxTheory3") <br />
 
-![WhiteBoxRecap](readme_images/WhiteBoxRecap.PNG "WhiteBoxRecap")
+So if we recap, the idea behind whitebox watermarking is the following : <br />
+
+![WhiteBoxRecap](readme_images/WhiteBoxRecap.PNG "WhiteBoxRecap") <br />
 
 
 ## Our hyperparameters
 
-![WhiteBoxApplication](readme_images/14.PNG "WhiteBoxApplication")
+For our experiments, we chose theses hyperparameters since they are communly used for this kind of training. Also we randomly chose to watermark the 4th convolution layer but the watermark can be applied anywhere else. <br />
+
+![WhiteBoxApplication](readme_images/14.PNG "WhiteBoxApplication") <br />
 
 ## Our results
 
