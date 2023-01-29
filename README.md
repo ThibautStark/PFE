@@ -41,11 +41,17 @@ With those choices and commun hyperparameters, we obtain after a simple training
 
 ## The theory
 
+The main idea behind blackbox watermarking is to embed an unatural error inside the neural network training so that, we the error is detected we can say for sure that this is our watermark <br />
+
+In order to do that, we transform part of a class of our dataset in a unatural way, for instance by writing "TEST" on it, then we put it in the most visually opposed class. After that data manipulation, we can simply test if a similarly modified image put into the network is returned to as the predicted error <br />
 ![BlackBoxTheory1](readme_images/7.PNG "BlackBoxTheory1")
 
+For our application, we chose to put "HTI" onto images of planes and to move then to the horses label. Planes have a different form and background texture and color than horses. <br />
 ![BlackBoxTheory2](readme_images/8.PNG "BlackBoxTheory2")
 
 ## Our hyperparameters
+
+For our experiments, we chose theses hyperparameters since they are communly used for this kind of training
 
 ![BlackBoxApplication](readme_images/13.PNG "BlackBoxApplication")
 
