@@ -102,16 +102,24 @@ Also, we notice that even the watermarking of the loss heavily affect the perfor
 
 The demonstrate the importance of the X_key, we try to deciefer our watermarked weights with a X_key that is different from our own. Here, we take another randomized X_key (which was not used for watermarking the weights). <br />
 The difference between 100% and 80% tells us that only the original X_key can achieve optimal retrivial performances. As such, the secrecy and ownership of the original X_key is paramount to claim ownership of the network. <br />
-![WhiteBoxResultsWithoutAttacks2](readme_images/21.PNG "WhiteBoxResultsWithoutAttacks2")
+![WhiteBoxResultsWithoutAttacks2](readme_images/21.PNG "WhiteBoxResultsWithoutAttacks2") <br />
 
-Fine
+We finetune with 10% of the training epochs to simulate a real attack of the watermark. <br />
+We notice that there is still a 100% retrieval accuracy and as such, whitebox being robust to finetuning <br />
 ![WhiteBoxResultsFinetuning](readme_images/22.PNG "WhiteBoxResultsFinetuning")
 
+We chose to prune the first layer of the network but could have chosen any other. We notice that the retrieval accuracy is affected by this attacks and as such we can say that whitebox watermarking is not robust to pruning <br />
+More importantly, if by a stroke of unluck, the attacker attack the watermarked layer, the watermark completely disappear. <br />
 ![WhiteBoxResultsPruning](readme_images/23.PNG "WhiteBoxResultsPruning")
 
 # Conclusion
 
+We can then, after some experimentation draw this chart for the watermarking of neural network. <br />
 ![Conclusion](readme_images/24.PNG "Conclusion")
 
+Also, an important point to note is that the watermark naturally decays of the increase of epochs of the attacks. As such, even though one originaly put a certain quantity for the training of a network and watermark it, someone else can put the same amount of effort to retrain this network without the first one being able to claim ownership.
+As such, legal and moral implicatoin of the ownership of network training is not resolved by this study. <br />
 ## Sources & thanks
+This project was carried out on the basis of those two articles. 
+We would like to profoundly thank our supervisor and tutor for the precious help they offered in all the aspects of this project <br />
 ![Sources & thanks](readme_images/26.PNG  "Sources & thanks")
