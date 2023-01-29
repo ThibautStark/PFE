@@ -51,7 +51,7 @@ For our application, we chose to put "HTI" onto images of planes and to move the
 
 ## Our hyperparameters
 
-For our experiments, we chose theses hyperparameters since they are communly used for this kind of training
+For our experiments, we chose theses hyperparameters since they are communly used for this kind of training <br />
 
 ![BlackBoxApplication](readme_images/13.PNG "BlackBoxApplication")
 
@@ -92,10 +92,19 @@ For our experiments, we chose theses hyperparameters since they are communly use
 
 ## Our results
 
+After embedding our watermarks onto the weights of the 4th conv layer during the training. We then reproject thoses weigths onto our initial X_key, when then compare the results of this projection to our threshold which is here 0.5. Then compare this tensor of size of (Tx1) made out of 1 and 0 to our original watermark. <br />
+
+We can see here that there is a 100% retriaval accuracy of our watermark tensor from thoses watermarked weights. <br />
+
+Also, we notice that even the watermarking of the loss heavily affect the performance of the model in the first epochs, after several epochs the difference between the original loss and the watermarked loss is insignificant <br />
+
 ![WhiteBoxResultsWithoutAttacks](readme_images/20.PNG "WhiteBoxResultsWithoutAttacks")
 
+The demonstrate the importance of the X_key, we try to deciefer our watermarked weights with a X_key that is different from our own. Here, we take another randomized X_key (which was not used for watermarking the weights). <br />
+The difference between 100% and 80% tells us that only the original X_key can achieve optimal retrivial performances. As such, the secrecy and ownership of the original X_key is paramount to claim ownership of the network. <br />
 ![WhiteBoxResultsWithoutAttacks2](readme_images/21.PNG "WhiteBoxResultsWithoutAttacks2")
 
+Fine
 ![WhiteBoxResultsFinetuning](readme_images/22.PNG "WhiteBoxResultsFinetuning")
 
 ![WhiteBoxResultsPruning](readme_images/23.PNG "WhiteBoxResultsPruning")
