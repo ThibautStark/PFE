@@ -57,12 +57,19 @@ For our experiments, we chose theses hyperparameters since they are communly use
 
 ## Our results
 
+The training is affected throughout the first epochs as it seems to be much slower than the non watermarked training.
+Moreover, an expected confusion would be airplanes confused as horses or the other way around, which fortunately doesn't happen. </br>
 ![BlackBoxResultsWithoutAttacks](readme_images/17.PNG "BlackBoxResultsWithoutAttacks")
-
+ </br>
+ 
+ We try out the watermark by testing each watemarked image through the network and seeing if their result is horse or not. 100% accuracy means that all watermarked images are recognized as a horse.
+ We see here that, before and after pruning, the watermark has 100% accuracy, meaning that pruning doesn't have an effect on the watermark. </br>
 ![BlackBoxResultsPruning](readme_images/18.PNG "BlackBoxResultsPruning")
 
+Following the same logic, we try out finetuning as an attack with roughly 10% of the training epochs added as finetuning with the initial CIFAR_10 database, no change is seen on the watermark accuracy either.  </br>
 ![BlackBoxResultsFinetuning](readme_images/19.PNG "BlackBoxResultsFinetuning")
 
+These results show the robustness of Blackbox Watermarking towards finetuning and pruning attacks
 
 # Whitebox watermarking
 
